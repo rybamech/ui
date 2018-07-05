@@ -1,0 +1,115 @@
+@import "assets/scss/bootstrap-reboot.min";
+@import "assets/scss/bootstrap.min";
+@import "assets/scss/bootstrap-grid.min";
+
+//TODO: после набора цветов для всего приложения, желательно обновить бутстрап для проекта(взять исходники из sass), и объединить с этим файлом
+//На данный момент файл нужен, чтобы перекрывать часть стилей бутстрапа плюс добавить несколько глобальных стилей
+
+/* You can add global styles to this file, and also import other style files */
+// default settings
+.lh-high {
+  line-height: 2;
+}
+
+.lh-medium {
+  line-height: 1.35;
+}
+
+.bg-danger {
+  background: -ms-linear-gradient(0deg, rgb(199, 66, 160) 0%, rgb(223, 28, 116) 100%) !important;
+  background: -moz-linear-gradient(0deg, rgb(199, 66, 160) 0%, rgb(223, 28, 116) 100%) !important;
+  background: -webkit-linear-gradient(0deg, rgb(199, 66, 160) 0%, rgb(223, 28, 116) 100%) !important;
+
+  &.small {
+    border-width: 1.5px;
+  }
+}
+
+.border-danger {
+  border-width: 3px !important;
+  border-color: deeppink !important;
+
+  &.small-border {
+    border-width: 1.2px !important;
+  }
+  @media screen and (min-width: 993px) {
+    &.border-md {
+      border-color: transparent !important;
+    }
+  }
+}
+
+.bg-danger.flat {
+  background: deeppink !important;
+}
+
+.bg-light {
+  background: #f7f7f7 !important;
+}
+
+.border-light {
+  border-color: #f7f7f7;
+}
+
+.volume-danger {
+  z-index: 2;
+  -webkit-box-shadow: 0 20px 75px -12px deeppink;
+  -moz-box-shadow: 0 20px 75px -12px deeppink;
+  box-shadow: 0 20px 75px -12px deeppink;
+}
+
+.volume-dark {
+  z-index: 2;
+  -webkit-box-shadow: 0 20px 75px -12px rgba(31, 15, 45, 0.5);
+  -moz-box-shadow: 0 20px 75px -12px rgba(31, 15, 45, 0.5);
+  box-shadow: 0 20px 75px -12px rgba(31, 15, 45, 0.5);
+}
+
+.rounded-strong {
+  border-radius: 0.8rem !important;
+}
+
+.rounded-bottom-strong {
+  border-bottom-left-radius: 0.8rem !important;
+  border-bottom-right-radius: 0.8rem !important;
+}
+
+// TODO: Delete after customizing bootstrap theme
+.border-danger {
+  border-width: 3px !important;
+  border-color: deeppink !important;
+}
+
+.bg-dark {
+  background-color: rgba(31, 15, 45, 0.702) !important;
+  opacity: 1 !important;
+}
+
+.text-danger {
+  color: deeppink !important;
+}
+
+.text-dark {
+  color: #301159 !important;
+}
+
+a.btn-rasputin, button.btn-rasputin {
+  position: relative;
+  z-index: 1;
+  background: -ms-linear-gradient(0deg, rgb(199, 66, 160) 0%, rgb(223, 28, 116) 100%) !important;
+  background: -moz-linear-gradient(0deg, rgb(199, 66, 160) 0%, rgb(223, 28, 116) 100%) !important;
+  background: -webkit-linear-gradient(0deg, rgb(199, 66, 160) 0%, rgb(223, 28, 116) 100%) !important;
+  box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, 0.13);
+  transition: box-shadow 0.2s ease-in-out 0.1s, color 0.2s ease-in-out 0.1s, background-color 0.2s ease-in-out 0.1s;
+  border: 1px solid transparent !important;
+
+  &:focus, &:hover, &:active {
+    color: desaturate(yellow, 10%) !important;
+    box-shadow: 4px 4px 10px 0 rgba(137, 5, 92, 0.35);
+  }
+
+}
+
+.pointer-none {
+  pointer-events: none;
+}

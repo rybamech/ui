@@ -1,0 +1,18 @@
+$main-color: deeppink;
+$animate-time: 0.075s;
+$delay-time: $animate-time/2;
+$border-radius: 0.25rem;
+$item-height: 2.4rem;
+
+.dropdown-img {
+  $height: 1.6rem;
+  max-height: $height;
+  min-height: $height;
+
+  &>img {
+    max-height: $height;
+    min-height: $height;
+    max-width: $height;
+    transform: translateY(-0.1*$height);
+  }
+}

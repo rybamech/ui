@@ -1,0 +1,31 @@
+//--------------MODAL WINDOW------------------->
+.modal-window {
+  $animate-time: 0.2s;
+  $delay-time: $animate-time/2;
+  top: 0;
+  min-height: 100vh;
+  min-width: 100%;
+  z-index: 100;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity $animate-time ease-in-out $delay-time;
+
+
+  .modal-background, .modal-wrapper {
+    min-height: 100vh;
+    min-width: 100%;
+    visibility: hidden;
+    transition: visibility $animate-time ease-in-out $delay-time;
+  }
+
+  &.showed {
+    opacity: 1;
+    pointer-events: auto;
+
+    .modal-background, .modal-wrapper {
+      visibility: visible;
+    }
+  }
+
+}
+//--------------END OF MODAL WINDOW------------------->

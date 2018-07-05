@@ -1,0 +1,66 @@
+//main colors
+$main-color: deeppink;
+
+//TODO: вынести в отдельный компонент - меню для кнопки с выпадающим меню и автокомплита
+.rasputin-menu {
+  $border-radius: 0.25rem;
+  $animation-time: 0.15s;
+  $delay-animation-time: 0.1s;
+
+  max-height: 0;
+  overflow-y: auto;
+  border-radius: $border-radius;
+  z-index: 4;
+  opacity: 0 !important;
+
+  //animation on click
+  transition: max-height $animation-time ease-in-out $delay-animation-time, opacity $animation-time ease-in-out $delay-animation-time;
+
+  &.showed::-webkit-scrollbar {
+    background-color: lighten($main-color, 25%);
+  }
+
+  &.showed::-webkit-scrollbar-thumb {
+    background-color: $main-color;
+  }
+
+  &::-webkit-scrollbar {
+    width: 6px;
+    background-color: transparent;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: $border-radius;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    width: 6px;
+    background-color: transparent;
+    border-radius: $border-radius;
+  }
+
+  &.showed {
+    //различная высота для выпадающего меню
+    @media screen and (min-width: 993px) {
+      max-height: 8rem;
+    }
+    @media screen and (max-width: 992px) {
+      max-height: 12rem;
+    }
+    opacity: 1 !important;
+  }
+
+  & > div.menu-item {
+    transition: background-color 0.2s ease-in-out, 0.1s;
+
+    &:first-child {
+      border-top: $border-radius;
+    }
+
+    &:last-child {
+      border-bottom: $border-radius;
+    }
+
+    &:hover, &:active, &:focus, &.selected {
+      background: darken($main-color, 20%);
+    }
+  }
+}

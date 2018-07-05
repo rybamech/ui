@@ -1,0 +1,17 @@
+$main-color: deeppink;
+$animate-time: 0.075s;
+$delay-time: $animate-time/2;
+$border-radius: 0.25rem;
+$item-height: 2.4rem;
+
+.rasputin-dropdown-item {
+  cursor: pointer;
+  transition: background-color $animate-time ease-in-out $delay-time, color $animate-time ease-in-out $delay-time;
+  min-height: $item-height;
+  max-height: $item-height;
+
+  &:hover, &.selected {
+    background: lighten($main-color, 10%);
+    color: #fff;
+  }
+}

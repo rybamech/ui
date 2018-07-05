@@ -1,0 +1,22 @@
+<!--Все инпуты и кнопки лучше вынести в отдельные компоненты по примеру registration form-->
+<div class="col-12">
+  <form>
+    <label class="pt-4">Enter user name</label>
+    <rasputin-input [model]="model.login"></rasputin-input>
+    <label class="pt-4">Enter user surname</label>
+    <rasputin-input [model]="model.password"></rasputin-input>
+    <div class="row">
+      <div class="col-12">
+        <p class="mt-3 row mx-0 mb-0">
+              <span class="mr-2">
+                <rasputin-checkbox [model]="model.isSaveSession"></rasputin-checkbox>
+              </span>
+          Remember me!
+        </p>
+      </div>
+    </div>
+    <button type="button" (click)="submitForm()" class="btn btn-block btn-rasputin mt-4 text-light font-weight-bolder">
+      Submit!
+    </button>
+  </form>
+</div>

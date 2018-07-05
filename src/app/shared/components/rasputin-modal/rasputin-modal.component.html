@@ -1,0 +1,7 @@
+<div [class.showed]="isShowed" class="modal-window position-fixed">
+  <div (click)="hide()" class="bg-dark modal-background position-absolute">
+  </div>
+  <div class="modal-wrapper d-flex flex-column justify-content-center align-items-center">
+    <ng-content></ng-content>
+  </div>
+</div>

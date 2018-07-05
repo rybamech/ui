@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>RasputinFrontend</title>
+
+  <base href="/">
+
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <style>
+    /*Add fonts*/
+    @font-face {
+      font-family: poppins;
+      font-weight: bold;
+      src: url("./assets/fonts/Poppins-Bold.ttf") format("opentype");
+    }
+
+    @font-face {
+      font-family: poppins-middle;
+      src: url("./assets/fonts/Poppins-SemiBold.ttf") format('opentype');
+    }
+
+    @font-face {
+      font-family: poppins;
+      font-weight: initial;
+      src: url("./assets/fonts/Poppins-Regular.ttf") format('opentype');
+    }
+
+    body {
+      font-family: poppins, Lucida Grande, sans-serif;
+    }
+
+    /* TODO: inject into bootstrap */
+    .font-weight-bolder {
+      font-family: poppins-middle, Lucida Grande, sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <app-root></app-root>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<div class="col-12 px-0">
+  <div class="position-absolute pointer-none rasputin-dropdown-item py-0 px-0">
+    <rasputin-dropdown-item [item]="model.selectedItem" [isHighlightedOnSelect]="false"></rasputin-dropdown-item>
+  </div>
+  <input (click)="toggleTupShowed()" (blur)="hideTip()" [type]="model.type" readonly class="form-control bg-white rasputin-dropdown" #input [title]="model.title" (keyup)="change(input)" type="text">
+  <!--Иконка svg - возможно стоит сделать реюзабельный компонент типа унвиерсальной иконки-->
+  <!--Который будет рендерить нужную иконку в зависимости от входных данных-->
+  <div class="dropdown-icon">
+    <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M7 10l5 5 5-5z"/>
+      <path d="M0 0h24v24H0z" fill="none"/>
+    </svg>
+  </div>
+
+  <!--Выпадающее меню-->
+  <!--класс scroll-showed - скрывает скроллбар, если все итемы помещаются на выпадающем меню, и наоборот-->
+  <div [class.showed]="isTipShowed"
+       [class.scroll-showed]="model.items.length > 3"
+       class="rasputin-dropdown-menu bg-white rounded volume-dark">
+    <div class="rasputin-dropdown-rows">
+      <div *ngFor="let item of model.items" (click)="change(item)" class="rasputin-dropdown-row">
+        <rasputin-dropdown-item [item]="item"></rasputin-dropdown-item>
+      </div>
+    </div>
+  </div>
+</div>
+

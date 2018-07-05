@@ -1,0 +1,43 @@
+<div class="col-12 px-0 position-absolute header-wrapper">
+  <div class="container-fluid px-0">
+    <app-header></app-header>
+  </div>
+</div>
+<div class="col-12 px-0 profile-background pt-5 position-fixed">
+</div>
+<div class="col-12 px-0 pt-5">
+  <div class="col-lg-10 mx-auto col-md-12 pt-5">
+    <div class="profile-menu bg-dark border border-danger rounded-strong">
+      <div class="col-12 row mx-0 px-4 d-flex flex-row justify-content-between align-content-center">
+        <div class="profile-menu-tab">
+          <a class="text-light text-uppercase font-weight-bolder" [routerLink]="['./stats']">stats</a>
+        </div>
+        <div class="profile-menu-tab">
+          <a class="text-light text-uppercase font-weight-bolder" [routerLink]="['./campaigns']">campaigns</a>
+        </div>
+        <div class="profile-menu-tab">
+          <a class="text-light text-uppercase font-weight-bolder" [routerLink]="['./countries']">countries</a>
+        </div>
+        <div class="profile-menu-tab">
+          <a class="text-light text-uppercase font-weight-bolder" [routerLink]="['./members']">members</a>
+        </div>
+        <div class="profile-menu-tab">
+          <a class="text-light text-uppercase font-weight-bolder" [routerLink]="['./referals']">referals</a>
+        </div>
+        <div class="profile-menu-tab">
+          <a class="text-light text-uppercase font-weight-bolder" [routerLink]="['./models']">models</a>
+        </div>
+        <div class="profile-menu-tab">
+          <a class="text-light text-uppercase font-weight-bolder" [routerLink]="['./referal-campaigns']">referal-campaigns</a>
+        </div>
+
+      </div>
+      <rasputin-paper [isBorderTopRounded]="false">
+        <div>
+          <router-outlet></router-outlet>
+        </div>
+      </rasputin-paper>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,101 @@
+<!--Все инпуты и кнопки лучше вынести в отдельные компоненты по примеру registration form-->
+<div class="col-12 px-0">
+  <form class="registration-form">
+    <div class="row mx-0 px-0">
+      <div class="col-3">
+        <h6 class="font-weight-bolder text-uppercase">Account settings</h6>
+      </div>
+      <div class="col-3">
+        <h6 class="font-weight-bolder text-uppercase">Contact information</h6>
+      </div>
+      <div class="offset-3 col-3">
+        <h6 class="font-weight-bolder text-uppercase">Describe your traffic</h6>
+      </div>
+      <div class="col-3">
+        <label class="pt-2">Enter login</label>
+        <rasputin-input [model]="model.login"></rasputin-input>
+        <label class="pt-2">Enter password</label>
+        <rasputin-input [model]="model.password"></rasputin-input>
+        <label class="pt-2">Confirm password</label>
+        <rasputin-input [model]="model.confirmPassword"></rasputin-input>
+        <label class="pt-2">Enter Email</label>
+        <rasputin-input [model]="model.email"></rasputin-input>
+        <label class="pt-2">Choose your role</label>
+        <rasputin-dropdown [model]="model.role"></rasputin-dropdown>
+      </div>
+      <div class="col-3 px-0">
+        <div class="col-12 default-hidden" [class.showed]="isUserIndividual()">
+          <label class="pt-2">Fullname</label>
+          <rasputin-input [model]="model.fullName"></rasputin-input>
+        </div>
+        <div class="col-12 default-hidden" [class.showed]="isUserCompany()">
+          <label class="pt-2">Company name</label>
+          <rasputin-input [model]="model.companyName"></rasputin-input>
+        </div>
+        <div class="col-12">
+          <label class="pt-2">Country</label>
+          <rasputin-input [model]="model.country"></rasputin-input>
+        </div>
+        <div class="col-12">
+          <label class="pt-2">City</label>
+          <rasputin-input [model]="model.city"></rasputin-input>
+        </div>
+        <div class="col-12">
+          <label class="pt-2">Phone</label>
+          <rasputin-input [model]="model.phone"></rasputin-input>
+        </div>
+        <div class="col-12">
+          <label class="pt-2">Messenger</label>
+          <rasputin-dropdown [model]="model.messengerType"></rasputin-dropdown>
+        </div>
+      </div>
+      <div class="col-3 px-0">
+        <div class="col-12">
+          <label class="pt-2">Address</label>
+          <rasputin-input [model]="model.address"></rasputin-input>
+        </div>
+        <div class="col-12">
+          <label class="pt-2">Region</label>
+          <rasputin-input [model]="model.region"></rasputin-input>
+        </div>
+        <div class="col-12">
+          <label class="pt-2">Postal code</label>
+          <rasputin-input [model]="model.postalCode"></rasputin-input>
+        </div>
+        <div class="col-12">
+          <label class="pt-2">ID</label>
+          <rasputin-input [model]="model.identityNumber"></rasputin-input>
+        </div>
+        <div class="col-12">
+          <label class="pt-2">Messenger id</label>
+          <rasputin-input [model]="model.messengerId"></rasputin-input>
+        </div>
+      </div>
+      <div class="col-3">
+        <label class="pt-2">Your website</label>
+        <rasputin-input [model]="model.website"></rasputin-input>
+        <label class="pt-2">How did you find bonga-cache</label>
+        <rasputin-input [model]="model.bongaCache"></rasputin-input>
+      </div>
+      <div class="col-12">
+        <p class="mt-4 row mx-0 mb-1">
+            <span class="mr-2">
+                <rasputin-checkbox [model]="model.checkbox1"></rasputin-checkbox>
+            </span>
+          I agree with user pact
+        </p>
+        <p class="mt-3 row mx-0 mb-1">
+            <span class="mr-2">
+                <rasputin-checkbox [model]="model.checkbox2"></rasputin-checkbox>
+            </span>
+          I agree with Putin
+        </p>
+      </div>
+      <div class="offset-9 col-3">
+        <button type="button" (click)="submitForm()"
+                class="btn btn-block btn-rasputin mt-4 text-light font-weight-bolder">Submit!
+        </button>
+      </div>
+    </div>
+  </form>
+</div>

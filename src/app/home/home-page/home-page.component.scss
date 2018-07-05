@@ -1,0 +1,299 @@
+
+//header
+.header-wrapper {
+  z-index: 10;
+}
+
+.content-wrapper {
+  z-index: 1;
+}
+
+//--------------CAROUSEL AND HEADER-------------------->
+
+// carousel block
+.carousel-block {
+  min-height: 35rem;
+  max-height: 35rem;
+  z-index: 1;
+}
+
+/* non-physical carousel-block */
+.non-physical-carousel {
+  min-height: 47rem;
+  max-height: 47rem;
+  z-index: -1;
+}
+
+.background-carousel {
+  max-width: 100%;
+  min-width: 100%;
+  width: 100%;
+}
+
+.carousel-element {
+  width: 100%;
+  background: url("../../../assets/images/environment/background-carousel1.png");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: cover;
+  min-height: 43rem;
+  max-height: 43rem;
+}
+
+// ending of carousel block
+.carousel-wave {
+  top: 22rem;
+  max-width: 100%;
+  min-width: 100%;
+  pointer-events: none;
+  background: url("../../../assets/images/environment/background-carousel-wave.png");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: cover;
+  min-height: 470px;
+  max-height: 470px;
+}
+
+// physical carousel block
+.physical-carousel {
+}
+
+//--------------END OF CAROUSEL AND HEADER-------------------->
+
+//--------------INTRO BLOCK------------------->
+
+.intro-block {
+  position: relative;
+}
+
+/* non-physical pink-wave block */
+.intro-image {
+  z-index: 1;
+  transform: translateY(-5rem);
+  overflow-x: hidden;
+}
+
+.intro-image > img {
+  z-index: 1;
+}
+
+//--------------END OF INTRO BLOCK------------------->
+
+//--------------PINK WAVE BLOCK------------------->
+.pink-wave {
+  transform: translateY(-13rem);
+  z-index: auto;
+}
+
+.pink-wave > img {
+  z-index: auto;
+  max-width: 100%;
+  min-width: 100%;
+  width: 100%;
+}
+
+.pink-text {
+  transform: translateY(9.5rem);
+}
+
+//--------------END OF PINK WAVE BLOCK------------------->
+
+//--------------EARNING BLOCK------------------->
+.earning-block {
+  z-index: 1;
+}
+
+.earning-photo {
+  height: 35rem;
+  z-index: 0;
+}
+
+.earning-background {
+  position: absolute;
+  overflow-x: hidden;
+}
+@media screen and (min-width: 1200px) {
+  .earning-background {
+    overflow-x: hidden;
+  }
+
+  .earning-mobile-transition-left {
+    transform: translateX(0rem);
+  }
+
+  .earning-mobile-transition-right {
+    transform: translateX(0rem);
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .earning-background {
+    overflow-x: hidden;
+  }
+
+  .earning-mobile-transition-left {
+    transform: translateX(-7rem);
+  }
+
+  .earning-mobile-transition-right {
+    transform: translateX(4rem);
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .earning-background {
+    overflow-x: hidden;
+  }
+
+  .earning-mobile-transition-left {
+    transform: translateX(-7rem);
+  }
+
+  .earning-mobile-transition-right {
+    transform: translateX(3rem);
+  }
+}
+
+.condition-info {
+  min-height: 10rem;
+}
+
+//--------------END OF EARNING BLOCK------------------->
+
+//--------------CRYPTO BLOCK------------------->
+.crypto-block {
+  z-index: 2;
+  max-height: 0;
+}
+
+.crypto-item {
+  $size: 6rem;
+  z-index: 2;
+  height: $size;
+  transform: translateY(-1/2 * $size);
+}
+
+.float-coin>img {
+  max-height: 8rem;
+  transform: translateY(-4rem) translateX(-4rem);
+}
+
+//--------------END OF CRYPTO BLOCK------------------->
+
+//--------------PURPLE BLOCK------------------->
+
+/* non-physical purple-block */
+.purple-block {
+  $height: 38rem;
+  background: url("../../../assets/images/environment/background-purple-block.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  min-height: $height;
+  max-height: $height;
+}
+
+.purple-block > img {
+  max-width: 100%;
+  min-width: 100%;
+  width: 100%;
+}
+
+//--------------END OF PURPLE BLOCK------------------->
+
+//--------------BANNERS BLOCK------------------->
+$promo-height: 18rem;
+$banner-margin: $promo-height * 2/3;
+
+.promo-banners {
+  z-index: 2;
+  transform: translateY(-$banner-margin);
+}
+
+.banner-block > div {
+}
+
+.banner-image {
+  width: 100%;
+
+
+  & img {
+    width: 100%;
+
+  }
+}
+
+//--------------END OF BANNERS BLOCK------------------->
+
+//--------------LABEL BLOCK------------------->
+.label-block {
+  margin-top: 16rem * 2/3;
+}
+
+.label-devices > img {
+  width: 100%;
+  transform: translateY(2rem);
+  z-index: 2;
+}
+
+//--------------END OF LABEL BLOCK------------------->
+
+//--------------PINK BLOCK------------------->
+
+/* non-physical pink-block */
+.pink-block {
+  background-image: url("../../../assets/images/environment/background-pink-block.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  z-index: -1;
+}
+
+/* non-physical pink-block */
+.support-block {
+  overflow-x: hidden;
+}
+.support-image {
+}
+
+.support-image > img {
+  width: 100%;
+}
+
+//--------------END OF PINK BLOCK------------------->
+
+
+
+
+
+
+
+
+
+
+//--------------REGISTRATION MESSAGE BLOCK------------------->
+
+.registration-message {
+  transform: translateY(-6rem);
+}
+//--------------END OF REGISTRATION MESSAGE BLOCK------------------->
+
+
+
+
+
+
+
+//--------------PINK BLOCK------------------->
+.purple-wave-block {
+  z-index: -1;
+  width: 100%;
+}
+
+.purple-wave-block>img {
+  z-index: 4;
+  max-width: 100%;
+  min-width: 100%;
+  width: 100%;
+}
+//--------------END OF PINK BLOCK------------------->
